@@ -7,6 +7,46 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/product.css">
+	<!-- Menambahkan Favicon -->
+	<link rel="icon" href="https://img86.pixhost.to/images/475/562849176_skyzopedia.jpg" type="image/jpeg">
+	<style>
+		/* Menambahkan background gambar */
+		body {
+			background-image: url('https://img86.pixhost.to/images/475/562849176_skyzopedia.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			margin: 0;
+			padding: 0;
+		}
+		/* Menata kotak produk */
+		.produk-row {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			gap: 20px;
+		}
+		.produk-item {
+			flex: 1 1 calc(50% - 10px); /* Membuat dua kolom dalam satu baris */
+			background-color: rgba(255, 255, 255, 0.8);
+			border-radius: 10px;
+			padding: 20px;
+			text-align: center;
+			cursor: pointer;
+			transition: transform 0.3s;
+		}
+		.produk-item:hover {
+			transform: scale(1.05);
+		}
+		.produk-item i {
+			font-size: 40px;
+			color: #333;
+		}
+		.produk-item h3 {
+			margin-top: 10px;
+			color: #333;
+		}
+	</style>
 </head>
 <body>
 	<div class="container">
@@ -27,16 +67,27 @@
 			<h1><i class="fas fa-cogs"></i> Produk Kami</h1>
 			<p>Berikut adalah produk yang kami tawarkan. Klik pada setiap produk untuk menghubungi kami di WhatsApp.</p>
 
-			<!-- Row 1: Script Bot WhatsApp -->
+			<!-- Row Produk -->
 			<div class="produk-row">
+				<!-- Kotak 1: Jasa Desain -->
+				<div class="produk-item" onclick="window.location.href='https://wa.me/6285655548594?text=Halo kak, saya ingin memesan jasa desain'">
+					<i class="fas fa-pencil-alt"></i>
+					<h3>Jasa Desain</h3>
+				</div>
+
+				<!-- Kotak 2: Sewa Bot -->
+				<div class="produk-item" onclick="window.location.href='https://wa.me/6285655548594?text=Halo kak, saya ingin sewa bot'">
+					<i class="fas fa-robot"></i>
+					<h3>Sewa Bot</h3>
+				</div>
+
+				<!-- Kotak 3: Mora AI No Encrypt -->
 				<div class="produk-item" onclick="window.location.href='https://wa.me/6285655548594?text=Halo kak, saya pengen beli script bot whatsapp Mora no encrypt'">
 					<i class="fas fa-comments"></i>
 					<h3>Mora AI No Encrypt</h3>
 				</div>
-			</div>
 
-			<!-- Row 2: Panel -->
-			<div class="produk-row">
+				<!-- Kotak 4: Panel Pterodactyl -->
 				<div class="produk-item" onclick="window.location.href='https://wa.me/6285655548594?text=Halo kak, saya ingin beli panel pterodactyl, minta list-nya dong'">
 					<i class="fas fa-tachometer-alt"></i>
 					<h3>Panel Pterodactyl</h3>
