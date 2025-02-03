@@ -1,0 +1,129 @@
+/* Reset dan default font */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* Background untuk seluruh body */
+body {
+	background: url('https://i.pinimg.com/originals/58/c5/b5/58c5b5ebde42823d6fbd461d6af340da.jpg') no-repeat center center fixed;
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	backdrop-filter: blur(5px);
+}
+
+/* Container utama yang berisi konten */
+.container {
+	width: 100%;
+	max-width: 900px;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(8px);
+	opacity: 0;
+	transform: scale(0.9);
+	animation: fadeInScale 1s forwards;
+	margin: 20px;
+}
+
+/* Animasi container ketika halaman dimuat */
+@keyframes fadeInScale {
+	0% {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Header dan navigasi */
+header {
+	margin-bottom: 20px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+	list-style: none;
+}
+
+nav a {
+	font-size: 20px; /* Ukuran ikon */
+	color: #333;
+	transition: color 0.3s ease;
+}
+
+/* Efek hover pada ikon navigasi */
+nav a:hover {
+	color: #764ba2;
+}
+
+/* Styling untuk bagian Produk */
+#produk {
+	text-align: center;
+}
+
+#produk h1 {
+	font-size: 24px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+#produk p {
+	font-size: 18px;
+	color: #333;  /* Mengubah warna teks menjadi putih */
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+/* Styling untuk row produk */
+.produk-row {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 40px;
+}
+
+/* Styling produk item */
+.produk-item {
+	background: rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+	text-align: center;
+	width: 250px;
+	cursor: pointer;
+	transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.produk-item:hover {
+	background: rgba(0, 0, 0, 0.8);
+	transform: translateY(-10px);
+}
+
+.produk-item i {
+	font-size: 50px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.produk-item h3 {
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+.produk-item p {
+	font-size: 16px;
+	color: #fff;  /* Mengubah warna teks menjadi putih */
+	margin-bottom: 15px;
+}
